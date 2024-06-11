@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   const [ posts, setPosts] = useState([]);
-  useEffect(() => {clear
+  useEffect(() => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get('https://api.rss2json.com/v1/api.json', {
