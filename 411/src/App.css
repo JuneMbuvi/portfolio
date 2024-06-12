@@ -1,17 +1,20 @@
 .App {
   text-align: center;
-  background-color: black;
   color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-header {
   background-color: black;
   padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
-}
 nav a {
   color: white;
   margin: 0 15px;
@@ -20,13 +23,6 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
-main {
-  padding-top: 20px;
-}
-
-.about, .contact {
-  padding: 20px;
-  margin: 20px;
-  background-color: #333;
-  border-radius: 8px;
+.App-main {
+  padding-top: 60px;
 }
