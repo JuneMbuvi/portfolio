@@ -1,15 +1,41 @@
 .Home {
     text-align: left;
     padding: 20px;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
+    color: white;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
-.Home section {
+
+.Home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+ .Home > * {
+    position: relative;
+    z-index: 2;
+ }
+
+#about, #contacts {
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+#about p, #contacts p {
+    margin: 10px 0;
 }

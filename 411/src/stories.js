@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './stories.css';
 
 function Stories() {
@@ -24,12 +25,13 @@ function Stories() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App Stories">
       <header className="App-header">
         <h1>The 411</h1>
         <nav>
+          <Link to="/">Home</Link>
           <a href="#about">About</a>
-          <a href="#Contacts">Contacts</a>
+          <a href="#contacts">Contacts</a>
           <a href="#posts">Posts</a>
         </nav>
       </header>
@@ -37,7 +39,7 @@ function Stories() {
         {posts.length > 0 ? (
           posts.map(post => (
             <div key={post.guid} className="post">
-              <h2>{post.title}</h2>
+              <h2><a href={post.link} target="_blank" rel="noopener noreferrer">{post.title}</a></h2>
               <p dangerouslySetInnerHTML={{ __html: post.contentSnippet }}></p>
               <a href={post.link} target="_blank" rel="noopener noreferrer">Read More</a>
             </div>

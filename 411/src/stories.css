@@ -1,11 +1,39 @@
+.App {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.App-header {
+    background-color: black;
+    padding: 20px;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 .Stories {
     padding: 20px;
+    background: white;
+    color: black;
 }
 .post {
     background-color: #333;
     margin: 20px 0;
     padding: 20px;
     border-radius: 5px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .post h3 {
     color: #ffcc00;
